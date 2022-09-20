@@ -50,7 +50,7 @@ ul {
   height: 80px;
 }
 
-.navigation {
+.header-container {
   display: flex;
   height: 80px;
   padding-top: 32px;
@@ -70,7 +70,7 @@ ul {
   text-decoration: none;
 }
 
-.web {
+.logo__web {
   color: var(--accent-color);
 }
 
@@ -80,13 +80,17 @@ ul {
   margin-left: 93px;
 }
 
-.site-nav {
+.nav__list {
   display: flex;
   padding-left: 0;
   align-self: center;
 }
 
-.nav-link {
+.nav__item:not(:first-child) {
+  margin-left: 50px;
+}
+
+.nav__link {
   display: block;
   position: relative;
   color: var(--main-text-color);
@@ -100,15 +104,11 @@ ul {
   transition: color 250ms var(--cubic);
 }
 
-.nav-item:not(:first-child) {
-  margin-left: 50px;
-}
-
-.nav-link.current {
+.nav__link--current {
   color: var(--accent-color);
 }
 
-.current::after {
+.nav__link--current:after {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -121,25 +121,25 @@ ul {
   border-radius: 2px;
 }
 
-.nav-link:hover,
-.nav-link:focus,
-.contact-link:hover,
-.contact-link:focus {
+.nav__link:hover,
+.nav__link:focus,
+.contact__link:hover,
+.contact__link:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
 
-.contacts {
+.contact {
   display: flex;
   margin-left: auto;
   align-items: center;
 }
 
-.nav-item-contact:not(:last-child) {
+.contact__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.contact-link {
+.contact__link {
   display: flex;
   align-items: center;
   color: var(--secondary-text-color);
@@ -153,7 +153,7 @@ ul {
   transition: color 250ms var(--cubic);
 }
 
-.icon-contacts {
+.contact__icon {
   fill: currentColor;
   margin-right: 10px;
   align-items: center;
@@ -179,7 +179,7 @@ ul {
   background-position: center;
 }
 
-.hero-title {
+.hero__title {
   width: 696px;
   margin: auto;
   margin-bottom: 30px;
@@ -266,7 +266,7 @@ ul {
   transition: fill 250ms var(--cubic);
 }
 
-.icon-btn-close:hover {
+.btn-close__icon:hover {
   fill: #2196f3;
 }
 
@@ -281,12 +281,17 @@ ul {
   margin-bottom: 12px;
 }
 
-.register-form {
+.registration {
   display: flex;
   flex-direction: column;
 }
 
-.column-name {
+.registration__label {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.registration__label-name {
   display: block;
   font-size: 12px;
   line-height: 1.17;
@@ -295,7 +300,7 @@ ul {
   margin-bottom: 4px;
 }
 
-.register-input {
+.registration__input {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -308,20 +313,15 @@ ul {
   transition: border-color 250ms var(--cubic);
 }
 
-.register-input:focus {
+.registration__input:focus {
   border-color: var(--accent-color);
 }
 
-.register-input:focus + .register-icon {
+.registration__input:focus + .registrarion__icon {
   fill: var(--accent-color);
 }
 
-.register-label {
-  position: relative;
-  margin-bottom: 10px;
-}
-
-.register-icon {
+.registration__icon {
   position: absolute;
   top: 29px;
   left: 12px;
@@ -329,11 +329,11 @@ ul {
   transition: fill 250ms var(--accent-color);
 }
 
-.register-comment {
+.registration__comment {
   margin-bottom: 20px;
 }
 
-.comment {
+.registration__input-comment {
   display: block;
   height: 120px;
   padding: 12px;
@@ -347,38 +347,38 @@ textarea[name="comment"]::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.policity-label {
+.policity {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
 }
 
-.policity-icon {
+.policity__icon {
   border-radius: 2px;
   transition: background-color 250ms var(--cubic);
 }
 
-.policity-input:checked + .policity-icon {
+.policity__input:checked + .policity__icon {
   background-color: #2196f3;
 }
 
-.policity-input:checked + .policity-icon .icon-check {
+.policity__input:checked + .policity__icon .policity__icon--check {
   opacity: 1;
 }
 
-.policity-input:checked + .policity-icon .icon-uncheck {
+.policity__input:checked + .policity__icon .policity__icon--uncheck {
   opacity: 0;
 }
 
-.icon-check {
+.policity__icon--check {
   opacity: 0;
   fill: var(--white-text-color);
 
   transition: opacity 250ms var(--cubic);
 }
 
-.icon-uncheck {
+.policity__icon--uncheck {
   width: 11px;
   height: 8px;
   opacity: 1;
@@ -386,7 +386,7 @@ textarea[name="comment"]::placeholder {
   transition: opacity 250ms var(--cubic);
 }
 
-.policity-name {
+.policity__name {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -399,11 +399,15 @@ textarea[name="comment"]::placeholder {
   padding-right: 52px;
 }
 
-.terms {
+.policity__terms {
   color: var(--accent-color);
 }
 
 /* feature */
+
+.feature {
+  padding-bottom: 0px;
+}
 
 .visually-hidden {
   position: absolute;
@@ -418,15 +422,15 @@ textarea[name="comment"]::placeholder {
   overflow: hidden;
 }
 
-.features {
+.features__list {
   display: flex;
 }
 
-.features-subtitle:not(:first-child) {
+.features__item:not(:first-child) {
   margin-left: 30px;
 }
 
-.features-bg {
+.features__box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -435,7 +439,7 @@ textarea[name="comment"]::placeholder {
   height: 120px;
 }
 
-.subtitle {
+.title {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -444,7 +448,7 @@ textarea[name="comment"]::placeholder {
   text-transform: uppercase;
 }
 
-.subtitle-text {
+.feature__text {
   width: 270px;
   color: var(--secondary-text-color);
   font-size: 14px;
@@ -452,7 +456,8 @@ textarea[name="comment"]::placeholder {
   letter-spacing: 0.03em;
 }
 
-.section-title {
+/* activity */
+.section__title {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -461,13 +466,7 @@ textarea[name="comment"]::placeholder {
   text-align: center;
 }
 
-/* activity */
-
-.act {
-  padding-top: 0;
-}
-
-.activity {
+.activity__list {
   display: flex;
 }
 
@@ -481,13 +480,13 @@ textarea[name="comment"]::placeholder {
   margin-left: 30px;
 }
 
-.activity-img {
+.thumb__img {
   display: block;
   max-width: 100%;
   height: 294px;
 }
 
-.label {
+.thumb__title {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -503,11 +502,11 @@ textarea[name="comment"]::placeholder {
 
 /* our team */
 
-.our-team {
+.team {
   background-color: #f5f4fa;
 }
 
-.team {
+.team__list {
   display: flex;
   margin: auto;
   width: 1170px;
@@ -525,11 +524,11 @@ textarea[name="comment"]::placeholder {
   margin-left: 30px;
 }
 
-.description {
+.employees__desc {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.name {
+.employees__name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -537,7 +536,7 @@ textarea[name="comment"]::placeholder {
   text-align: center;
 }
 
-.position {
+.employees__position {
   margin-top: 10px;
   color: var(--secondary-text-color);
   font-size: 16px;
@@ -553,7 +552,7 @@ textarea[name="comment"]::placeholder {
   justify-content: center;
 }
 
-.social-link {
+.social__link {
   display: flex;
   width: 44px;
   height: 44px;
@@ -565,13 +564,13 @@ textarea[name="comment"]::placeholder {
   transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
 }
 
-.social-link .link {
+.social__link {
   fill: currentColor;
   background-color: var(--white-text-color);
 }
 
-.social-link:hover,
-.social-link:focus {
+.social__link:hover,
+.social__link:focus {
   color: #ffffff;
   background-color: #2196f3;
 }
@@ -582,8 +581,12 @@ textarea[name="comment"]::placeholder {
   display: flex;
   gap: 30px;
 }
+.client__item {
+  width: 170px;
+  height: 92px;
+}
 
-.client-link {
+.client__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -596,22 +599,17 @@ textarea[name="comment"]::placeholder {
   transition: color 250ms var(--cubic), border-color 250ms var(--cubic);
 }
 
-.client-icon {
+.client__icon {
   fill: currentColor;
 }
 
-.client-list-link {
-  width: 170px;
-  height: 92px;
-}
-
-.client-link:hover,
-.client-link:focus {
+.client__link:hover,
+.client__link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-/* footer left address*/
+/* footer address*/
 
 .footer {
   padding: 60px 0;
@@ -619,17 +617,17 @@ textarea[name="comment"]::placeholder {
   font-style: normal;
 }
 
-.flex {
+.footer-container {
   display: flex;
   align-items: baseline;
 }
 
-.footer-left {
+.footer__adress {
   flex-grow: 1;
   margin-right: 70px;
 }
 
-.footer-logo {
+.footer__logo {
   color: #ffffff;
   font-family: "Raleway";
   font-weight: 700;
@@ -643,7 +641,7 @@ textarea[name="comment"]::placeholder {
   margin-top: 20px;
 }
 
-.address-link {
+.address__link {
   color: var(--white-text-color);
   font-size: 14px;
   line-height: 1.71;
@@ -652,7 +650,7 @@ textarea[name="comment"]::placeholder {
   text-decoration: none;
 }
 
-.footer-link {
+.address__contact {
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   line-height: 1.71;
@@ -661,48 +659,48 @@ textarea[name="comment"]::placeholder {
   text-decoration: none;
 }
 
-.footer-address:not(:first-child) {
+.address__item:not(:first-child) {
   margin-top: 9px;
 }
 
-/* footer center join */
+/* footer join */
 
-.footer-center {
+.footer__join {
   margin-right: 93px;
 }
 
-.join {
+.footer__title {
   display: block;
   color: var(--white-text-color);
   font-style: normal;
   margin-bottom: 20px;
 }
 
-.join-list-link {
+.join__list {
   display: flex;
   gap: 10px;
 }
 
-.social-link .down {
+.social__link--down {
   fill: var(--white-text-color);
   background-color: rgba(255, 255, 255, 0.1);
 
   transition: background-color 250ms var(--cubic);
 }
 
-.social-link .down:hover,
-.social-link .down:focus {
+.social__link--down:hover,
+.social__link--down:focus {
   background-color: var(--accent-color);
 }
 
-/* footer right mailing */
+/* footer subscrible*/
 
-.mailing-list {
+.subscrible__form {
   display: flex;
   align-items: center;
 }
 
-.mail-input {
+.subscrible__input {
   width: 358px;
   margin-right: 12px;
   padding-left: 18px;
@@ -717,7 +715,7 @@ textarea[name="comment"]::placeholder {
   cursor: pointer;
 }
 
-.mailing-btn {
+.subscrible-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -738,7 +736,7 @@ textarea[name="comment"]::placeholder {
   color: #ffffff;
 }
 
-.mailing-icon {
+.subscrible__icon {
   margin-left: 10px;
   fill: var(--white-text-color);
 }
