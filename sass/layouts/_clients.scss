@@ -1,39 +1,40 @@
 .client {
-@include section (94px, 94px);
-
-    &__list {
-     @include gap (flex, 30px);
+    @include section (94px, 94px);
     }
 
-     &__item {
-        width: 170px;
-        height: 92px;
+.client__list {
+    @include gap (flex, 30px);
+    }
+
+.client__item {
+    width: 170px;
+    height: 92px;
     }
     
-    &__link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        border: 1px solid #afb1b8;
-        border-radius: 4%;
-        color: #afb1b8;
+.client__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #afb1b8;
+    border-radius: 4%;
+    color: #afb1b8;
     
-        transition: color $transition, border-color $transition;
+    transition: color $transition, border-color $transition;
+
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+        border-color: $accent-color;
         }
+    }
 
-   &__icon {
-       fill: currentColor;
+.client__icon {
+    fill: currentColor;
    }
 
-   &__link:hover,
-   &__link:focus {
-       color: $accent-color;
-       border-color: $accent-color;
-   }
-
-}
 
 
 

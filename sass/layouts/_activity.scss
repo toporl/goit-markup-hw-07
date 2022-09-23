@@ -1,9 +1,10 @@
 .activity{
 @include section (94px, 94px);
 
-    &__list {
+}
+.activity__list {
     display: flex;
-}}
+}
 
 .thumb {
     position: relative;
@@ -12,24 +13,24 @@
 
     &:not(:first-child) {
     margin-left: 30px;
-}
-    
-    &__img {
-        display: block;
-        max-width: 100%;
-        height: 294px;
-        }
-
-    &__title {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: $white-text-color;
-        background-color: rgba(47, 48, 58, 0.8);
-        height: 70px;
-        width: 100%;
-        margin-bottom: 0;
 }}
+
+.thumb__img {
+    display: block;
+    max-width: 100%;
+    height: 294px;
+}
+
+.thumb__title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white-text-color;
+    background-color: rgba(47, 48, 58, 0.8);
+    height: 70px;
+    width: 100%;
+    margin-bottom: 0;
+}

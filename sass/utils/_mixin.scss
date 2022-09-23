@@ -4,6 +4,6 @@
 }
 
 @mixin gap($display, $gap){
- display:$display ;
- gap: $gap;
+    display:$display ;
+    gap: $gap;
 }

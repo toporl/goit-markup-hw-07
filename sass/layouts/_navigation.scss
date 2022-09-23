@@ -1,14 +1,16 @@
-.nav {
+.nav{
     margin-left: 93px;
-    
-    &__list {
+
+}
+
+.nav__list {
     display: flex;
     padding-left: 0;
-    align-self: center;}
+    align-self: center;
+}
 
-    &__item:not(:first-child) {
-            margin-left: 50px;
-        }
+.nav__item:not(:first-child) {
+    margin-left: 50px;
 }
 
 
@@ -25,15 +27,21 @@
 
     transition: color $transition;
 
-    &--current {
-            color: $accent-color;
+    &:hover,
+    &:focus {
+        color: $accent-color;
+        fill: $accent-color;
         }
+}
 
-    &--current:after {
+.nav__link--current {
+    color: $accent-color;
+    
+    &:after {
         position: absolute;
         left: 0;
         bottom: 0;
-    
+
         content: " ";
         display: block;
         width: 100%;
@@ -41,13 +49,6 @@
         background-color: $accent-color;
         border-radius: 2px;
     }
-
-        &:hover,
-        &:focus{
-            color: $accent-color;
-        fill: $accent-color; 
-    }
-        
 }
 
 

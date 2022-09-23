@@ -2,12 +2,12 @@
     border-bottom: 1px solid #ececec;
     background-color: $white-text-color;
     height: 80px;
-
-    &__container {
-        display: flex;
-        height: 80px;
-        padding-top: 32px;
-        padding-bottom: 32px;
-        align-items: center;
 }
+
+.header__container {
+    display: flex;
+    height: 80px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    align-items: center;
 }

@@ -2,15 +2,13 @@
     @include section (94px, 94px);
 
     background-color: #f5f4fa;
-
-    &__list {
-        display: flex;
-        margin: auto;
-        width: 1170px;
-        }
 }
 
-
+ .team__list {
+     display: flex;
+     margin: auto;
+     width: 1170px;
+ }
 
 .employees {
     width: 270px;
@@ -22,27 +20,27 @@
     &:not(:first-child) {
         margin-left: 30px;
         }
+}
 
-    &__desc {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        }
+.employees__desc {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 
-    &__name {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.19;
-        letter-spacing: 0.03em;
-        text-align: center;
-        }
-    
-     &__position {
-        margin-top: 10px;
-        color: $secondary-text-color;
-        font-size: 16px;
-        line-height: 1.19;
-        letter-spacing: 0.03em;
-        text-align: center;
-        margin-bottom: 16px;
-        }
+.employees__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.employees__position {
+    margin-top: 10px;
+    color: $secondary-text-color;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 16px;
 }
