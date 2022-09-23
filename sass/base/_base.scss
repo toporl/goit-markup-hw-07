@@ -4,6 +4,19 @@ body {
     font-family: $main-font;
 }
 
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &--no-padding-top{
+        padding-top: 0px;
+    }
+    
+    &--another-bg{
+        background-color: #f5f4fa;
+    }
+}
+
 .title {
     margin-bottom: 10px;
     font-weight: 700;

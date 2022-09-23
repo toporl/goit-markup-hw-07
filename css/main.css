@@ -4,6 +4,17 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.section--no-padding-top {
+  padding-top: 0px;
+}
+.section--another-bg {
+  background-color: #f5f4fa;
+}
+
 .title {
   margin-bottom: 10px;
   font-weight: 700;
@@ -277,11 +288,6 @@ ul {
 }
 
 .feature {
-  padding-top: 94px;
-  padding-bottom: 0px;
-}
-
-.feature__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,34 +321,26 @@ ul {
 }
 
 .activity {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.activity__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.thumb {
+.activity__item {
   position: relative;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-.thumb:not(:first-child) {
-  margin-left: 30px;
-}
-
-.thumb__img {
   display: block;
   max-width: 100%;
   height: 294px;
 }
+.activity__item:not(:first-child) {
+  margin-left: 30px;
+}
 
-.thumb__title {
+.activity__title {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -363,12 +361,6 @@ ul {
 }
 
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  background-color: #f5f4fa;
-}
-
-.team__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -376,23 +368,23 @@ ul {
   width: 1170px;
 }
 
-.employees {
+.team__item {
   width: 270px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: #ffffff;
 }
-.employees:not(:first-child) {
+.team__item:not(:first-child) {
   margin-left: 30px;
 }
 
-.employees__desc {
+.team__desc {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.employees__name {
+.team__name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -400,7 +392,7 @@ ul {
   text-align: center;
 }
 
-.employees__position {
+.team__position {
   margin-top: 10px;
   color: #757575;
   font-size: 16px;
@@ -419,6 +411,7 @@ ul {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
 .social__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -438,7 +431,7 @@ ul {
   fill: currentColor;
   background-color: #ffffff;
 }
-.social__link:hover, .social__link:focus {
+.social__link__link:hover, .social__link__link:focus {
   color: #ffffff;
   background-color: #2196f3;
 }
@@ -454,11 +447,6 @@ ul {
 }
 
 .client {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.client__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -842,11 +830,6 @@ textarea[name=comment]::placeholder {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.project-page {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .project {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -859,7 +842,6 @@ textarea[name=comment]::placeholder {
 .project__item {
   -ms-flex-preferred-size: calc((100% - 60px) / 3);
       flex-basis: calc((100% - 60px) / 3);
-  width: 370px;
 }
 
 .project__thumb {
@@ -896,6 +878,10 @@ textarea[name=comment]::placeholder {
   transition: transform transition;
   transition: transform transition, -webkit-transform transition;
 }
+.project__link:hover .project__overlay, .project__link:focus .project__overlay {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
 
 .overlay__desc {
   color: #ffffff;
@@ -911,12 +897,6 @@ textarea[name=comment]::placeholder {
   padding: 20px 24px;
   background: #ffffff;
   border: 1px solid #eeeeee;
-}
-
-.project__link:hover .project__overlay,
-.project__link:focus .project__overlay {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
 }
 
 .project__title {

@@ -5,7 +5,6 @@
   
 .project__item {
       flex-basis: calc((100% - 30px * 2) / 3);
-      width: 370px;
   }
 
 .project__thumb {
@@ -37,6 +36,11 @@
 
     transform: translateY(100%);
     transition: transform transition;
+
+    .project__link:hover &,
+    .project__link:focus & {
+        transform: translateY(0);
+        }
 }
 
 .overlay__desc {
@@ -54,11 +58,6 @@
     padding: 20px 24px;
     background: $white-text-color;
     border: 1px solid #eeeeee;
-}
-
-.project__link:hover .project__overlay,
-.project__link:focus .project__overlay {
-    transform: translateY(0);
 }
 
 .project__title {

@@ -1,8 +1,4 @@
 .client {
-    @include section (94px, 94px);
-    }
-
-.client__list {
     @include gap (flex, 30px);
     }
 

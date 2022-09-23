@@ -65,102 +65,11 @@
             Замовити послугу
           </button>
         </div>
-        <div class="backdrop is-hidden" data-modal>
-          <div class="modal">
-            <button type="button" class="btn-close" data-modal-close>
-              <svg class="btn-close__icon" width="18" height="18">
-                <use href="./images/icons.svg#btnclose"></use>
-              </svg>
-            </button>
-            <strong class="form-title"
-              >Залиште свої дані, ми вам передзвонимо</strong
-            >
-            <form class="registration" autocomplete="off">
-              <label class="registration__label">
-                <span class="registration__label-name">Ім'я</span>
-                <input
-                  class="registration__input"
-                  type="text"
-                  name="name"
-                  required
-                />
-                <svg class="registration__icon" width="18" height="18">
-                  <use href="./images/icons.svg#person"></use>
-                </svg>
-              </label>
-              <label class="registration__label">
-                <span class="registration__label-name">Телефон</span>
-                <input
-                  class="registration__input"
-                  type="tel"
-                  name="tel"
-                  required
-                />
-                <svg class="registration__icon" width="18" height="18">
-                  <use href="./images/icons.svg#phone"></use>
-                </svg>
-              </label>
-              <label class="registration__label">
-                <span class="registration__label-name">Пошта</span>
-                <input
-                  class="registration__input"
-                  type="email"
-                  name="email"
-                  required
-                />
-                <svg class="registration__icon" width="18" height="18">
-                  <use href="./images/icons.svg#email"></use>
-                </svg>
-              </label>
-              <label class="registration__comment">
-                <span class="registration__label-name">Коментар</span>
-                <textarea
-                  class="registration__input registration__input-comment"
-                  name="comment"
-                  placeholder="Введіть текст"
-                ></textarea>
-              </label>
-              <label class="policity">
-                <input
-                  class="policity__input visually-hidden"
-                  type="checkbox"
-                  name="policity"
-                  id="policity"
-                  required
-                />
-                <svg class="policity__icon" width="16" height="15">
-                  <use
-                    class="policity__icon--check"
-                    href="./images/icons.svg#check"
-                  ></use>
-                  <use
-                    class="policity__icon--uncheck"
-                    href="./images/icons.svg#uncheck"
-                  ></use>
-                </svg>
-                <span class="policity__name"
-                  >Погоджуюся з розсилкою та приймаю
-                  <a
-                    class="policity__terms"
-                    href=""
-                    target="_blank"
-                    rel="noopener norefferer"
-                    >Умови договору</a
-                  ></span
-                >
-              </label>
-
-              <button class="register-btn btn" type="subbmit">
-                Відправити
-              </button>
-            </form>
-          </div>
-        </div>
       </section>
-      <section class="feature">
+      <section class="section">
         <div class="container">
           <h2 class="visually-hidden">Особливості</h2>
-          <ul class="feature__list list">
+          <ul class="feature list">
             <li class="feature__item">
               <div class="feature__box">
                 <svg width="70" height="70">
@@ -211,62 +120,56 @@
           </ul>
         </div>
       </section>
-      <section class="activity">
+      <section class="section section--no-padding-top">
         <div class="container">
           <h2 class="section__title">Чим ми займаємося</h2>
           <div>
-            <ul class="activity__list list">
-              <div class="thumb">
-                <li class="thumb__img">
-                  <img
-                    src="./images/box1.jpg"
-                    alt="Розробка на компьютері"
-                    width="370"
-                    height="294"
-                  />
-                  <h3 class="thumb__title title">Десктопні додатки</h3>
-                </li>
-              </div>
-              <div class="thumb">
-                <li class="thumb__img">
-                  <img
-                    src="./images/box2.jpg"
-                    alt="Робота з мобільним додатком"
-                    width="370"
-                    height="294"
-                  />
-                  <h3 class="thumb__title title">Мобільні додатки</h3>
-                </li>
-              </div>
-              <div class="thumb">
-                <li class="thumb__img">
-                  <img
-                    src="./images/box3.jpg"
-                    alt="Робота з планшетом"
-                    width="370"
-                    height="294"
-                  />
-                  <h3 class="thumb__title title">Дизайнерські рішення</h3>
-                </li>
-              </div>
+            <ul class="activity list">
+              <li class="activity__item">
+                <img
+                  src="./images/box1.jpg"
+                  alt="Розробка на компьютері"
+                  width="370"
+                  height="294"
+                />
+                <h3 class="activity__title title">Десктопні додатки</h3>
+              </li>
+              <li class="activity__item">
+                <img
+                  src="./images/box2.jpg"
+                  alt="Робота з мобільним додатком"
+                  width="370"
+                  height="294"
+                />
+                <h3 class="activity__title title">Мобільні додатки</h3>
+              </li>
+              <li class="activity__item">
+                <img
+                  src="./images/box3.jpg"
+                  alt="Робота з планшетом"
+                  width="370"
+                  height="294"
+                />
+                <h3 class="activity__title title">Дизайнерські рішення</h3>
+              </li>
             </ul>
           </div>
         </div>
       </section>
-      <section class="team">
+      <section class="section section--another-bg">
         <div class="container">
           <h2 class="section__title">Наша команда</h2>
-          <ul class="team__list list">
-            <li class="employees">
+          <ul class="team list">
+            <li class="team__item">
               <img
                 src="./images/ihor.jpg"
                 alt="Ігор Дем'яненко"
                 width="270"
                 height="260"
               />
-              <div class="employees__desc">
-                <h3 class="employees__name">Ігор Дем'яненко</h3>
-                <p class="employees__position">Product Designer</p>
+              <div class="team__desc">
+                <h3 class="team__name">Ігор Дем'яненко</h3>
+                <p class="team__position">Product Designer</p>
                 <ul class="social list">
                   <li>
                     <a
@@ -323,16 +226,16 @@
                 </ul>
               </div>
             </li>
-            <li class="employees">
+            <li class="team__item">
               <img
                 src="./images/olga.jpg"
                 alt="Ольга Рєпіна"
                 width="270"
                 height="260"
               />
-              <div class="employees__desc">
-                <h3 class="employees__name">Ольга Рєпіна</h3>
-                <p class="employees__position">Frontend Developer</p>
+              <div class="team__desc">
+                <h3 class="team__name">Ольга Рєпіна</h3>
+                <p class="team__position">Frontend Developer</p>
                 <ul class="social list">
                   <li>
                     <a
@@ -389,16 +292,16 @@
                 </ul>
               </div>
             </li>
-            <li class="employees">
+            <li class="team__item">
               <img
                 src="./images/mykola.jpg"
                 alt="Микола Тарасов"
                 width="270"
                 height="260"
               />
-              <div class="employees__desc">
-                <h3 class="employees__name">Микола Тарасов</h3>
-                <p class="employees__position">Marketing</p>
+              <div class="team__desc">
+                <h3 class="team__name">Микола Тарасов</h3>
+                <p class="team__position">Marketing</p>
                 <ul class="social list">
                   <li>
                     <a
@@ -455,16 +358,16 @@
                 </ul>
               </div>
             </li>
-            <li class="employees">
+            <li class="team__item">
               <img
                 src="./images/mykhailo.jpg"
                 alt="Михайло Єрмаков"
                 width="270"
                 height="260"
               />
-              <div class="employees__desc">
-                <h3 class="employees__name">Михайло Єрмаков</h3>
-                <p class="employees__position">UI Designer</p>
+              <div class="team__desc">
+                <h3 class="team__name">Михайло Єрмаков</h3>
+                <p class="team__position">UI Designer</p>
                 <ul class="social list">
                   <li>
                     <a
@@ -524,10 +427,10 @@
           </ul>
         </div>
       </section>
-      <section class="client">
+      <section class="section">
         <div class="container">
           <h2 class="section__title">Постійні клієнти</h2>
-          <ul class="client__list list">
+          <ul class="client list">
             <li class="client__item">
               <a class="client__link" href=""
                 ><svg class="client__icon" width="106" height="60">
@@ -683,6 +586,89 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="btn-close" data-modal-close>
+          <svg class="btn-close__icon" width="18" height="18">
+            <use href="./images/icons.svg#btnclose"></use>
+          </svg>
+        </button>
+        <strong class="form-title"
+          >Залиште свої дані, ми вам передзвонимо</strong
+        >
+        <form class="registration" autocomplete="off">
+          <label class="registration__label">
+            <span class="registration__label-name">Ім'я</span>
+            <input
+              class="registration__input"
+              type="text"
+              name="name"
+              required
+            />
+            <svg class="registration__icon" width="18" height="18">
+              <use href="./images/icons.svg#person"></use>
+            </svg>
+          </label>
+          <label class="registration__label">
+            <span class="registration__label-name">Телефон</span>
+            <input class="registration__input" type="tel" name="tel" required />
+            <svg class="registration__icon" width="18" height="18">
+              <use href="./images/icons.svg#phone"></use>
+            </svg>
+          </label>
+          <label class="registration__label">
+            <span class="registration__label-name">Пошта</span>
+            <input
+              class="registration__input"
+              type="email"
+              name="email"
+              required
+            />
+            <svg class="registration__icon" width="18" height="18">
+              <use href="./images/icons.svg#email"></use>
+            </svg>
+          </label>
+          <label class="registration__comment">
+            <span class="registration__label-name">Коментар</span>
+            <textarea
+              class="registration__input registration__input-comment"
+              name="comment"
+              placeholder="Введіть текст"
+            ></textarea>
+          </label>
+          <label class="policity">
+            <input
+              class="policity__input visually-hidden"
+              type="checkbox"
+              name="policity"
+              id="policity"
+              required
+            />
+            <svg class="policity__icon" width="16" height="15">
+              <use
+                class="policity__icon--check"
+                href="./images/icons.svg#check"
+              ></use>
+              <use
+                class="policity__icon--uncheck"
+                href="./images/icons.svg#uncheck"
+              ></use>
+            </svg>
+            <span class="policity__name"
+              >Погоджуюся з розсилкою та приймаю
+              <a
+                class="policity__terms"
+                href=""
+                target="_blank"
+                rel="noopener norefferer"
+                >Умови договору</a
+              ></span
+            >
+          </label>
+          <button class="register-btn btn" type="subbmit">Відправити</button>
+        </form>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
