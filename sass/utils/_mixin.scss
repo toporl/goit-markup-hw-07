@@ -1,0 +1,9 @@
+@mixin section($padding-top, $padding-bottom){
+    padding-top: $padding-top;
+    padding-bottom: $padding-bottom;
+}
+
+@mixin gap($display, $gap){
+ display:$display ;
+ gap: $gap;
+}
